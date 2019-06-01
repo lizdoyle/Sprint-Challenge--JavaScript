@@ -14,6 +14,7 @@ const tyrannosaurus = {
   weight: '7000kg',
   long: '12m',
   period: 'Late Cretaceous',
+  roar = () => {return (`RAWERSRARARWERSARARARRRR`)} 
 };
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
@@ -52,7 +53,7 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
@@ -80,7 +81,7 @@ for(i=0; i < graduates.length; i++){
 };
 // COMPLETE
 
-// console.log(universities.sort());
+console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -95,7 +96,7 @@ graduates.forEach((mail) => {
 }); 
 
 // COMPLETE
-// console.log(contactInfo);
+console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
@@ -112,7 +113,7 @@ for(i = 0; i < graduates.length; i++) {
 }
 
 //  COMPLETE
-// console.log(uni);
+console.log(uni);
 
 
 
@@ -147,7 +148,7 @@ zooAnimals.forEach((zoo) =>
 )
 
 // COMPLETE
-// console.log(animalNames);
+console.log(animalNames);
 
 /* Request 2: .map()    
 
@@ -160,7 +161,7 @@ const lowerCase = zooAnimals.map((name) => {
   });
 
   // COMPLETE
-// console.log(lowerCase); 
+console.log(lowerCase); 
 
 /* Request 3: .filter() 
 
@@ -173,14 +174,19 @@ const lowerPopulation = zooAnimals.filter((low) => {
 
 // complete
 
-// console.log(lowerPopulation);
+console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals.reduce ((accu, total) => {
+      accu = accu + total.population;
+      return accu
+}, 0);
+
+// COMPLETE
 console.log(populationTotal);
 
 
@@ -189,4 +195,6 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
+// STRETCH COMPLETE (ALREADY ARROW FUNCTIONS)
 
