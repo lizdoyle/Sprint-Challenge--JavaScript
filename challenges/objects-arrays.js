@@ -6,18 +6,6 @@
   object name, diet, weight, length, period
 */
 
-// function Dinosaur(attr) {
-//   this.name = attr.name;
-//   this.diet: attr.diet;
-//   this.weight: attr.weight;
-//   this.long = attr.long;
-//   this.period = attr.period;
-// }
-
-
-// Dinosaur.prototype.dinolength = function() {
-//   return ` The ${this.name} is measured to be ${this.long} in length!`;
-// }
 
 
 const tyrannosaurus = { 
@@ -60,7 +48,7 @@ console.log(velociraptor.diet);
 console.log(stegosaurus.long);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
@@ -92,7 +80,7 @@ for(i=0; i < graduates.length; i++){
 };
 // COMPLETE
 
-console.log(universities.sort());
+// console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -118,15 +106,16 @@ graduates.forEach((mail) => {
 const uni = [];
 
 for(i = 0; i < graduates.length; i++) {
-  if (graduates[i].university == "uni") {
-     return uni.push(graduates[i]);
+  if (graduates[i].university.includes("Uni")) {
+      uni.push(graduates[i]);
   }
 }
 
-// console.log(JSON.stringify(uni));
+//  COMPLETE
+// console.log(uni);
 
 
-// not returning??
+
 // console.log(uni);
 
 
@@ -153,8 +142,12 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
+zooAnimals.forEach((zoo) => 
+  animalNames.push({"animal_name": zoo.animal_name, "scientific_name": zoo.scientific_name})
+)
 
-console.log(animalNames);
+// COMPLETE
+// console.log(animalNames);
 
 /* Request 2: .map()    
 
@@ -162,18 +155,25 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+const lowerCase = zooAnimals.map((name) => { 
+  return {"animal_name": name.animal_name.toLowerCase()}
+  });
 
-
-console.log(lowerCase); 
+  // COMPLETE
+// console.log(lowerCase); 
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
-console.log(lowerPopulation);
+const lowerPopulation = zooAnimals.filter((low) => {
+  return low.population < 5;
+})
+
+// complete
+
+// console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
 
