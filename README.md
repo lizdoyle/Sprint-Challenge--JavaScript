@@ -29,15 +29,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+.forEach loops through an array, just like .map, but .map creates its own new array.
 
 2. What is the difference between a function and a method?
+a method is a function inside of an object. a function does not have to be within an object
 
 3. What is closure?
+a function inside a function
 
 4. Describe the four rules of the 'this' keyword.
+implicit binding, global binding, explicit binding, and new binding.
 
 5. Why do we need super() in an extended class?
-
+we only need Super in es6, to replace the argument that Object.create does on a prototype in order to extend a class in es5. 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
